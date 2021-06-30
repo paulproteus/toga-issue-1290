@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Repro"
+bundle = "com.example.repro"
+version = "0.0.1"
+url = "https://repro.example.com/repro"
+license = "BSD license"
+author = 'Asheesh Laroia'
+author_email = "asheesh@repro.example.com"
+
+[tool.briefcase.app.repro]
+formal_name = "Repro"
+description = "My Repro"
+icon = "src/repro/resources/repro"
+sources = ['src/repro']
+requires = []
+
+
+[tool.briefcase.app.repro.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.repro.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.repro.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.repro.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.repro.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
